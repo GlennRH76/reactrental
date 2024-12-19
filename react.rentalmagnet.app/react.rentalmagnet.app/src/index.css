@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@keyframes add-to-cart {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.1) translate(500%, -500%);
+    opacity: 0;
+  }
+}
+
+.animate-add-to-cart {
+  animation: add-to-cart 2s ease-in-out forwards;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes fly-to-cart {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(50vw, -20vh) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(100vw, -50vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.fly-to-cart {
+  animation: fly-to-cart 1.5s ease-in-out forwards;
+}
